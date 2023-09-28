@@ -1,4 +1,4 @@
-# LeetCode Problem Solutions
+# leetcodeprograms
 
 This repository contains solutions to various LeetCode problems. LeetCode is a popular platform for practicing coding and algorithmic challenges, and this repository aims to provide clear and well-documented solutions to help improve problem-solving skills.
 
@@ -14,7 +14,7 @@ This repository contains solutions to various LeetCode problems. LeetCode is a p
 
 LeetCode is an excellent resource for sharpening your coding skills, preparing for technical interviews, or just having fun with challenging problems. This repository serves as a collection of solutions to various LeetCode problems, organized for easy reference and learning.
 
-Each problem solution is accompanied by detailed explanations, comments, and analysis of the time and space complexity. This should help you understand not only how to solve the problem but also why the solution works efficiently.
+Each problem solution is accompanied by detailed explanations, comments, and analysis of the time and space complexity. This should help understand not only how to solve the problem but also why the solution works efficiently.
 
 ## Getting Started
 
