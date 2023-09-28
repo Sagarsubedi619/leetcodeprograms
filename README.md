@@ -32,7 +32,7 @@ The repository is organized into folders, each representing a category of LeetCo
  ```bash
 leetcodeprograms/
 │
-├── ArrayAndString/
+├── arrayandstring/
 │   ├── problem1.java
 │   ├── problem2.java
 │   └── ...
