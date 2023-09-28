@@ -1,6 +1,6 @@
 # leetcodeprograms
 
-This repository contains solutions to various LeetCode problems. LeetCode is a popular platform for practicing coding and algorithmic challenges, and this repository aims to provide clear and well-documented solutions to help improve problem-solving skills.
+This repository contains solutions to Top Interview 150 LeetCode problems.
 
 ## Table of Contents
 
@@ -32,17 +32,17 @@ The repository is organized into folders, each representing a category of LeetCo
  ```bash
 leetcodeprograms/
 │
-├── Array/
+├── ArrayAndString/
 │   ├── problem1.java
 │   ├── problem2.java
 │   └── ...
 │
-├── String/
+├── TwoPointers/
 │   ├── problem3.java
 │   ├── problem4.java
 │   └── ...
 │
-├── Tree/
+├── SlidingWindow/
 │   ├── problem5.java
 │   ├── problem6.java
 │   └── ...
