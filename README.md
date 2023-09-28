@@ -23,4 +23,27 @@ To get started with this repository, follow these steps:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/leetcode-solutions.git
+   git clone https://github.com/Sagarsubedi619/leetcodeprograms.git
+
+   
+leetcode-solutions/
+│
+├── Array/
+│   ├── problem1.py
+│   ├── problem2.py
+│   └── ...
+│
+├── String/
+│   ├── problem3.py
+│   ├── problem4.java
+│   └── ...
+│
+├── Tree/
+│   ├── problem5.py
+│   ├── problem6.java
+│   └── ...
+│
+├── ...
+│
+├── README.md
+└── CONTRIBUTING.md
