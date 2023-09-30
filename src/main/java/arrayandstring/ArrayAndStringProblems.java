@@ -17,13 +17,18 @@ public class ArrayAndStringProblems
 	 * sorted array should not be returned by the function, but instead be stored inside the array nums1. To accommodate this, nums1 has a
 	 * length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and
 	 * should be ignored. nums2 has a length of n.
+	 *
+	 * @param nums1  array 1
+	 * @param  m number of elements in nums1 array
+	 * @param nums2 arrray 2
+	 * @param  n number of elements in nums2 array
 	 */
 	public static void program1(int[] nums1, int m, int[] nums2, int n)
 	{
-		System.arraycopy(nums2, 0, nums1, m, nums2.length);
+		System.arraycopy(nums2, 0, nums1, m, n);
 
 		//		Alternatively:
-		//		for (int i = 0; i < nums2.length; i++)
+		//		for (int i = 0; i < n; i++)
 		//		{
 		//			nums1[m + i] = nums2[i];
 		//		}
@@ -40,6 +45,10 @@ public class ArrayAndStringProblems
 	 *     elements of nums are not important as well as the size of nums.</li>
 	 *     <li>Return k.</li>
 	 * </ol>
+	 *
+	 * @param nums array
+	 * @param val evaluation value
+	 * @return result
 	 */
 	public static int program2(int[] nums, int val)
 	{
@@ -54,5 +63,33 @@ public class ArrayAndStringProblems
 			}
 		}
 		return k;
+	}
+
+	/**
+	 * Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only
+	 * once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
+	 * Consider the number of unique elements of nums to be k, to get accepted, you need to do the following things:
+	 * <ol>
+	 *     <li> Change the array nums such that the first k elements of nums contain the unique elements in the order they were present in
+	 *     nums initially. The remaining elements of nums are not important as well as the size of nums. </li>
+	 * 	   <li> Return k.</li>
+	 * 	</ol>
+	 *
+	 * @param nums array to use for evaluation
+	 * @return result
+	 */
+	public static int program3(int[] nums)
+	{
+		int k = 0;
+		for (int i = 0; i < nums.length; i++)
+		{
+
+			if (nums[k] != nums[i])
+			{
+				k++;
+				nums[k] = nums[i];
+			}
+		}
+		return k + 1;
 	}
 }
