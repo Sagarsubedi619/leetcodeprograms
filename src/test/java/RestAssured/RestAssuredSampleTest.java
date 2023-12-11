@@ -8,22 +8,21 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 
 /**
- * Various JobQueue Api tests using Rest assured.
+ * Various Api tests using Rest assured.
  *
  * @author sagar.subedi
  */
- class RestAssuredSampleTest
-{
+class RestAssuredSampleTest {
 	/**
-	 * Fetch queue test.
+	 * Fetch data test.
 	 */
 	@Test
-	void testGetQueues() {
+	void testGetData() {
 		final ValidatableResponse response = given()
 				.auth()
 				.basic("username", "pass***")
 				.when()
-				.get("queueUrl")
+				.get("Url")
 				.then();
 
 		response.assertThat()
@@ -31,19 +30,20 @@ import static io.restassured.RestAssured.given;
 
 		response.log()
 				.all();
+		// TODO: Various other junit assertions can be made.
 	}
 
 	/**
-	 * Create queue test.
+	 * Create data test.
 	 */
 	@Test
-	void testPostQueue() {
-		final String queue =
+	void testPostData() {
+		final String data =
 				"""
 				{
-				 "color": "000000",
-				 "customerId": 1,
-				 "queueName": "test"
+				 "someName": "name",
+				 "id": 1,
+				 "data": "test"
 				}
 				""";
 
@@ -52,27 +52,28 @@ import static io.restassured.RestAssured.given;
 				.basic("username", "pass***")
 				.header("Content-type", "application/json")
 				.and()
-				.body(queue)
+				.body(data)
 				.when()
-				.post("queueUrl")
+				.post("url")
 				.then()
 				.extract()
 				.response();
 
 		Assertions.assertEquals(201, response.statusCode(), "Expected the response code to be 201.");
+		// TODO: Various other junit assertions can be made.
 	}
 
 	/**
-	 * Update queue test.
+	 * Update data test.
 	 */
 	@Test
-	void testPutQueue() {
-		final String queue =
+	void testPutData() {
+		final String data =
 				"""
 				{
-				 "color": "000000",
-				 "customerId": 1,
-				 "queueName": "test-updated"
+				 "someName": "name",
+				 "id": 1,
+				 "data": "test"
 				}
 				""";
 
@@ -81,32 +82,34 @@ import static io.restassured.RestAssured.given;
 				.basic("username", "pass***")
 				.header("Content-type", "application/json")
 				.and()
-				.body(queue)
+				.body(data)
 				.when()
-				.put("queueUrl/id")
+				.put("url/id")
 				.then()
 				.extract()
 				.response();
 
 		Assertions.assertEquals(204, response.statusCode(), "Expected the response code to be 204.");
+		// TODO: Various other junit assertions can be made.
 	}
 
 	/**
-	 * Delete queue test.
+	 * Delete data test.
 	 */
 	@Test
-	void testDeleteQueue() {
+	void testDeleteData() {
 		final Response response = given()
 				.auth()
 				.basic("username", "pass***")
 				.header("Content-type", "application/json")
 				.and()
 				.when()
-				.delete("queueUrl/id")
+				.delete("url/id")
 				.then()
 				.extract()
 				.response();
 
 		Assertions.assertEquals(200, response.statusCode(), "Expected the response code to be 200.");
+		// TODO: Various other junit assertions can be made.
 	}
 }
